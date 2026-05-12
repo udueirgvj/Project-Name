@@ -1,0 +1,20 @@
+name: Run Social Bot
+on:
+  push:
+  schedule:
+    - cron: '0 */6 * * *' # يعمل كل 6 ساعات تلقائياً
+
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install Playwright
+        run: |
+          npm install
+          npx playwright install chromium
+      - name: Execute Bot
+        run: node index.js
