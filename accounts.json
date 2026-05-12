@@ -1,0 +1,5 @@
+[
+  { "id": 1, "user": "account_one", "proxy": "http://your-proxy.com" },
+  { "id": 2, "user": "account_two", "proxy": "http://your-proxy.com" }
+]
+
